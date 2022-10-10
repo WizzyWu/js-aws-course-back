@@ -43,4 +43,4 @@ Repository for backend part of homework at JS AWS Practitioner Course
 5. (-) Task: Lambda handlers are covered by basic UNIT tests (NO infrastructure logic is needed to be covered)
     * I didn't complete this task due to errors (jest + typescript)
 6. (DONE) Lambda handlers (getProductsList, getProductsById) code is written not in 1 single module (file) and separated in codebase.
-7. (DONE) Main error scenarios are handled by API ("Product not found" 404 error).
+7. (DONE) Main error scenarios are handled by API ("Product not found" 404 error). Example: https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products/345
