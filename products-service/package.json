@@ -5,7 +5,8 @@
   "main": "serverless.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "offline": "serverless offline --noPrependStageInUrl"
+    "offline": "serverless offline --noPrependStageInUrl",
+    "deploy": "serverless deploy"
   },
   "engines": {
     "node": ">=14.15.0"
@@ -13,6 +14,7 @@
   "dependencies": {
     "@middy/core": "^2.5.3",
     "@middy/http-json-body-parser": "^2.5.3",
+    "aws-sdk": "^2.1239.0",
     "lodash": "^4.17.21"
   },
   "devDependencies": {

@@ -1,0 +1,92 @@
+// AWS_CloudX_Products table
+INSERT INTO AWS_CloudX_Products VALUE
+{
+    'id': 1,
+    'title': 'The Settlers of Catan',
+    'year': 1995,
+    'author': 'Klaus Teuber',
+    'description': 'In The Settlers of Catan, players try to be the dominant force on the island of Catan by building settlements, cities, and roads. On each turn dice are rolled to determine what resources the island produces. Players build by spending resources (sheep, wheat, wood, brick and ore) that are depicted by these resource cards; each land type, with the exception of the unproductive desert, produces a specific resource: hills produce brick, forests produce wood, mountains produce ore, fields produce wheat, and pastures produce sheep.',
+    'price': 55,
+    'img': 'https://cf.geekdo-images.com/W3Bsga_uLP9kO91gZ7H8yw__itemrep/img/IzYEUm_gWFuRFOL8gQYqGm5gU6A=/fit-in/246x300/filters:strip_icc()/pic2419375.jpg'
+}
+
+INSERT INTO AWS_CloudX_Products VALUE {
+    'id': 2,
+    'title': 'Agricola',
+    'year': 2007,
+    'author': 'Uwe Rosenberg',
+    'description': 'In Agricola, you''re a farmer in a wooden shack with your spouse and little else. On a turn, you get to take only two actions, one for you and one for the spouse, from all the possibilities you''ll find on a farm: collecting clay, wood, or stone; building fences; and so on. You might think about having kids in order to get more work accomplished, but first you need to expand your house. And what are you going to feed all the little rugrats?',
+    'price': 40,
+    'img': 'https://cf.geekdo-images.com/dDDo2Hexl80ucK1IlqTk-g__itemrep/img/DzC9cA0TNmWUO7WLdl4-uFHfO_k=/fit-in/246x300/filters:strip_icc()/pic831744.jpg'
+}
+
+INSERT INTO AWS_CloudX_Products VALUE {
+    'id': 3,
+    'title': 'Cottage Garden',
+    'year': 2016,
+    'author': 'Uwe Rosenberg',
+    'description': 'In Cottage Garden, you compete in the art of gardening and are working two beds with a variety of flowers. Whenever no unplanted box is visible on a bed, you have completed it, then you count your points and replace it with a fresh, unplanted bed. You gain points for all of the visible plant pots and planting bells.',
+    'price': 35,
+    'img': 'https://cf.geekdo-images.com/7Zk5_GsYycmHYD4RN3kIJQ__itemrep/img/PrEK4EVtu2FO4-XWOsU8McAwCu4=/fit-in/246x300/filters:strip_icc()/pic3499059.jpg'
+}
+
+INSERT INTO AWS_CloudX_Products VALUE {
+    'id': 4,
+    'title': 'Nusfjord',
+    'year': 2017,
+    'author': 'Uwe Rosenberg',
+    'description': 'Nusfjord is a tranquil fishing village in the Lofoten archipelago in northern Norway. Fifty years ago, business was blooming when the codfish would come for spawning. Today, Nusfjord is more of a museum than a village, with less than a hundred people living there. Imagine how beautiful this place must be given that you must pay a fee to even look at the houses. Cruise ships used to pass by this long and now mostly abandoned island world.',
+    'price': 100,
+    'img': 'https://cf.geekdo-images.com/nKYqNPEE94Zk_q5Vtk527w__itemrep/img/DTF-dIrE-3e2qMVQIc61F9F1T-w=/fit-in/246x300/filters:strip_icc()/pic3729070.jpg'
+}
+
+INSERT INTO AWS_CloudX_Products VALUE {
+    'id': 5,
+    'title': 'Brass: Birmingham',
+    'year': 2018,
+    'author': 'Martin Wallace',
+    'description': 'Brass: Birmingham is an economic strategy game sequel to Martin Wallace 2007 masterpiece, Brass. Brass: Birmingham tells the story of competing entrepreneurs in Birmingham during the industrial revolution, between the years of 1770-1870. As in its predecessor, you must develop, build, and establish your industries and network, in an effort to exploit low or high market demands.',
+    'price': 70,
+    'img': 'https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__itemrep/img/giNUMut4HAl-zWyQkGG0YchmuLI=/fit-in/246x300/filters:strip_icc()/pic3490053.jpg'
+}
+
+INSERT INTO AWS_CloudX_Products VALUE {
+    'id': 6,
+    'title': 'Nanty Narking',
+    'year': 2019,
+    'author': 'Martin Wallace',
+    'description': 'Immersed deeply in the world of Dickens''s and Doyle''s literature, Nanty Narking moves you into the realities of the myths and legends of the Victorian era. The events in the game are tied to real and fictional characters and places in Victorian London The same London which inspired so many stories…',
+    'price': 39,
+    'img': 'https://cf.geekdo-images.com/QVnxAPBc7rhzQ90WGH-G_Q__itemrep/img/5n2PUYy7ySY4R9QnIcm1yDdXY_s=/fit-in/246x300/filters:strip_icc()/pic6111342.png'
+}
+
+// AWS_CloudX_Stocks table
+INSERT INTO AWS_CloudX_Stocks VALUE {
+    'product_id': 1,
+    'count': 6
+}
+
+INSERT INTO AWS_CloudX_Stocks VALUE {
+    'product_id': 2,
+    'count': 3
+}
+
+INSERT INTO AWS_CloudX_Stocks VALUE {
+    'product_id': 3,
+    'count': 11
+}
+
+INSERT INTO AWS_CloudX_Stocks VALUE {
+    'product_id': 4,
+    'count': 2
+}
+
+INSERT INTO AWS_CloudX_Stocks VALUE {
+    'product_id': 5,
+    'count': 7
+}
+
+INSERT INTO AWS_CloudX_Stocks VALUE {
+    'product_id': 6,
+    'count': 4
+}

@@ -4,19 +4,38 @@ Repository for backend part of homework at JS AWS Practitioner Course
 
 # Links
 
-### Backend
-* API (getProductsList): https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products
-* API (getProductsById) https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products/1
+## Backend
+* API (getProductsList): (GET) https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products
+* API (getProductsById) (GET) https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products/1
+* API (createProduct) (POST) https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products
 * Repository: https://github.com/WizzyWu/js-aws-course-vue
-* PR Task 3: (this)
+### Backend PR's
+* PR Task 3: https://github.com/WizzyWu/js-aws-course-back/pull/1
+* PR Task 4: (placeholder)
 
-### Frontend:
+## Frontend:
 * Repository: https://github.com/WizzyWu/js-aws-course-back
-* PR Task 3: https://github.com/WizzyWu/js-aws-course-vue/pull/2
 * CloudFront distribution domain name: https://d29qcu9ke2ed75.cloudfront.net
 * S3 Static site host: http://popov-js-aws-course.s3-website-eu-west-1.amazonaws.com/
 * API documentation: https://d29qcu9ke2ed75.cloudfront.net/documentation/api.html
+### Frontend PR's
+* PR Task 2: https://github.com/WizzyWu/js-aws-course-vue/pull/1
+* PR Task 3: https://github.com/WizzyWu/js-aws-course-vue/pull/2
 
+# Task 4
+
+## What was done:
+## Base tasks
+1. (DONE) Task 4.1 is implemented
+2. (DONE) Task 4.2 is implemented lambda links are provided and returns data
+3. (DONE) Task 4.3 is implemented lambda links are provided and products are stored in DB.
+4. (DONE) My Frontend application is integrated with Product Service (/products API) and products from Product Service are represented on Frontend. Link to a working Frontend application is provided for cross-check reviewer. The links didn't change from Task 3.
+## Additional tasks
+1. (DONE) POST /products lambda functions returns error 400 status code if product data is invalid
+2. (DONE) All lambdas return error 500 status code on any error (DB connection, any unhandled error in code)
+3. (DONE) All lambdas do console.log for each incoming requests and their arguments
+4. (-) Use RDS instance instead fo DynamoDB tables. Do not commit your environment variables in serverless.yml to github!
+5. (-) Transaction based creation of product (in case stock creation is failed then related to this stock product is not created and not ready to be used by the end user and vice versa)
 
 # Task 3
 
