@@ -8,10 +8,12 @@ Repository for backend part of homework at JS AWS Practitioner Course
 * API (getProductsList): (GET) https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products
 * API (getProductsById) (GET) https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products/1
 * API (createProduct) (POST) https://te38q1ychd.execute-api.eu-west-1.amazonaws.com/dev/products
+* API (importProductsFile) (GET) https://vpaqrxcv79.execute-api.eu-west-1.amazonaws.com/dev/import?name=test
 * Repository: https://github.com/WizzyWu/js-aws-course-vue
 ### Backend PR's
 * PR Task 3: https://github.com/WizzyWu/js-aws-course-back/pull/1
-* PR Task 4: (placeholder)
+* PR Task 4: https://github.com/WizzyWu/js-aws-course-back/pull/2
+* PR Task 5: https://github.com/WizzyWu/js-aws-course-back/pull/3
 
 ## Frontend:
 * Repository: https://github.com/WizzyWu/js-aws-course-back
@@ -21,6 +23,20 @@ Repository for backend part of homework at JS AWS Practitioner Course
 ### Frontend PR's
 * PR Task 2: https://github.com/WizzyWu/js-aws-course-vue/pull/1
 * PR Task 3: https://github.com/WizzyWu/js-aws-course-vue/pull/2
+* PR Task 5: https://github.com/WizzyWu/js-aws-course-vue/pull/3
+
+# Task 5
+
+## What was done:
+## Base tasks
+1 (DONE) File serverless.yml contains configuration for importProductsFile function
+3 (DONE) The importProductsFile lambda function returns a correct response which can be used to upload a file into the S3 bucket
+4 (DONE) Frontend application is integrated with importProductsFile lambda
+5 (DONE) The importFileParser lambda function is implemented and serverless.yml contains configuration for the lambda
+## Additional tasks
++1 (DONE) - async/await is used in lambda functions
++1 (-) - importProductsFile lambda is covered by unit tests. (for JS only) aws-sdk-mock can be used to mock S3 methods
++1 (DONE) - At the end of the stream the lambda function should move the file from the uploaded folder into the parsed folder (move the file means that file should be copied into a new folder in the same bucket called parsed, and then deleted from uploaded folder)
 
 # Task 4
 
