@@ -1,20 +1,22 @@
 {
-  "name": "products-service",
+  "name": "import-service",
   "version": "1.0.0",
   "description": "Serverless aws-nodejs-typescript template",
   "main": "serverless.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "offline": "serverless offline --noPrependStageInUrl",
     "deploy": "serverless deploy"
   },
   "engines": {
     "node": ">=14.15.0"
   },
   "dependencies": {
-    "@middy/core": "^2.5.3",
-    "@middy/http-json-body-parser": "^2.5.3",
-    "aws-sdk": "^2.1239.0",
+    "@aws-crypto/sha256-browser": "^2.0.2",
+    "@aws-sdk/client-s3": "^3.212.0",
+    "@aws-sdk/s3-request-presigner": "^3.212.0",
+    "@aws-sdk/util-create-request": "^0.1.0-preview.6",
+    "@aws-sdk/util-format-url": "^0.1.0-preview.7",
+    "@middy/core": "^3.4.0",
+    "@middy/http-json-body-parser": "^3.4.0",
     "csv-parser": "^3.0.0",
     "lodash": "^4.17.21"
   },
@@ -24,8 +26,8 @@
     "@types/node": "^14.14.25",
     "esbuild": "^0.14.11",
     "json-schema-to-ts": "^1.5.0",
+    "serverless": "^3.0.0",
     "serverless-esbuild": "^1.23.3",
-    "serverless-offline": "^11.1.1",
     "ts-node": "^10.4.0",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.3"
