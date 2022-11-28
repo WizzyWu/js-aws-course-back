@@ -11,7 +11,7 @@ export default {
         event: 's3:ObjectCreated:*',
         rules: [
           {
-            prefix: 'uploaded/'
+            prefix: env.S3_BUCKET_UPLOADED_CATALOG_PATH,
           }
         ],
       },
