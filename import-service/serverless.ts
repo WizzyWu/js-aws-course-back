@@ -2,6 +2,7 @@ import type { AWS } from '@serverless/typescript';
 
 import importProductsFile from '@functions/import';
 import importFileParser from '@functions/parser';
+import env from 'env';
 
 const serverlessConfiguration: AWS = {
   service: 'import-service',
@@ -38,6 +39,13 @@ const serverlessConfiguration: AWS = {
             ],
             Resource: [
               'arn:aws:s3:::popov-js-aws-course-import/*',
+            ],
+          },
+          {
+            Effect: 'Allow',
+            Action: 'sqs:*',
+            Resource: [
+              env.SQS_QUEUE_ARN,
             ],
           }
         ]

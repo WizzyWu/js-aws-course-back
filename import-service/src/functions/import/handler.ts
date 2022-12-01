@@ -4,7 +4,7 @@ import { middyfy } from '@libs/lambda';
 
 import schema from './schema';
 import * as _ from 'lodash';
-import { s3_getSignedUrl } from '../../s3-helper/s3-functions';
+import { s3_getSignedUrl } from '../../aws-helpers/s3-functions';
 
 const importProductsFile: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
   const { queryStringParameters } = event;
