@@ -14,6 +14,7 @@ Repository for backend part of homework at JS AWS Practitioner Course
 * PR Task 3: https://github.com/WizzyWu/js-aws-course-back/pull/1
 * PR Task 4: https://github.com/WizzyWu/js-aws-course-back/pull/2
 * PR Task 5: https://github.com/WizzyWu/js-aws-course-back/pull/3
+* PR Task 6: https://github.com/WizzyWu/js-aws-course-back/pull/4
 
 ## Frontend:
 * Repository: https://github.com/WizzyWu/js-aws-course-back
@@ -24,6 +25,18 @@ Repository for backend part of homework at JS AWS Practitioner Course
 * PR Task 2: https://github.com/WizzyWu/js-aws-course-vue/pull/1
 * PR Task 3: https://github.com/WizzyWu/js-aws-course-vue/pull/2
 * PR Task 5: https://github.com/WizzyWu/js-aws-course-vue/pull/3
+
+# Task 6
+
+## What was done:
+## Base tasks
+1 (DONE) - File serverless.yml contains configuration for catalogBatchProcess function
+2 (DONE) - File serverless.yml contains policies to allow lambda catalogBatchProcess function to interact with SNS and SQS
+3 (DONE) - File serverless.yml contains configuration for SQS catalogItemsQueue
+4 (DONE) - File serverless.yml contains configuration for SNS Topic createProductTopic and email subscription
+## Additional tasks
++1 (-) - catalogBatchProcess lambda is covered by unit tests
++1 (DONE) - set a Filter Policy for SNS createProductTopic in serverless.yml and create an additional email subscription to distribute messages to different emails depending on the filter for any product attribute
 
 # Task 5
 
