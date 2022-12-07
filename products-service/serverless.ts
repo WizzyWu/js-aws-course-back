@@ -36,8 +36,8 @@ const serverlessConfiguration: AWS = {
               'dynamodb:*',
             ],
             Resource: [
-              'arn:aws:dynamodb:${aws:region}:*:table/${self:provider.environment.DYNAMODB_PRODUCTS_TABLE}',
-              'arn:aws:dynamodb:${aws:region}:*:table/${self:provider.environment.DYNAMODB_STOCKS_TABLE}',
+              env.ARN_DYNAMODB_PRODUCTS_TABLE,
+              env.ARN_DYNAMODB_STOCKS_TABLE,
             ],
           },
           {

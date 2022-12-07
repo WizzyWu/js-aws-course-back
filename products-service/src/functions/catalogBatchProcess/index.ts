@@ -8,6 +8,7 @@ export default {
       sqs: {
         arn:env.SQS_QUEUE_ARN,
         batchSize: 5,
+        cors: true,
       },
     },
   ],

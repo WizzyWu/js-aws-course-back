@@ -54,6 +54,35 @@ const serverlessConfiguration: AWS = {
   },
   // import the function via paths
   functions: { importProductsFile, importFileParser },
+  resources: {
+    Resources: {
+      GatewayResponseDefault4XX: {
+        Type: "AWS::ApiGateway::GatewayResponse",
+        Properties: {
+          ResponseParameters: {
+            "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
+            "gatewayresponse.header.Access-Control-Allow-Credentials": "'true'",
+            "gatewayresponse.header.Access-Control-Allow-Methods": "'GET,OPTIONS'",
+            "gatewayresponse.header.Access-Control-Allow-Headers": "'Content-Type,Authorization,Origin,Access-Control-Request-Method,Access-Control-Request-Headers'",
+          },
+          ResponseType: 'DEFAULT_4XX',
+          RestApiId: 'vpaqrxcv79',
+        },
+      },
+      GatewayResponseDefault5XX: {
+        Type: "AWS::ApiGateway::GatewayResponse",
+        Properties: {
+          ResponseParameters: {
+            "gatewayresponse.header.Access-Control-Allow-Origin": "'*'",
+            "gatewayresponse.header.Access-Control-Allow-Credentials": "'true'",
+            "gatewayresponse.header.Access-Control-Allow-Methods": "'GET,OPTIONS'",
+          },
+          ResponseType: 'DEFAULT_5XX',
+          RestApiId: 'vpaqrxcv79',
+        },
+      },
+    },
+  },
   package: { individually: true },
   custom: {
     esbuild: {
