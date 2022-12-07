@@ -1,4 +1,5 @@
 import { handlerPath } from '@libs/handler-resolver';
+import env from '../../../env';
 
 export default {
   handler: `${handlerPath(__dirname)}/handler.main`,
@@ -8,7 +9,10 @@ export default {
         method: 'get',
         path: 'import',
         cors: true,
-        request: {
+        authorizer: {
+          arn: env.AUTHORIZER_LAMBDA_ARN,
+          name: "basicAuthorizer",
+          type: "token",
         },
       },
     },

@@ -1,7 +1,7 @@
 # js-aws-course-back
 Repository for backend part of homework at JS AWS Practitioner Course
 
-
+cd ..
 # Links
 
 ## Backend
@@ -15,6 +15,7 @@ Repository for backend part of homework at JS AWS Practitioner Course
 * PR Task 4: https://github.com/WizzyWu/js-aws-course-back/pull/2
 * PR Task 5: https://github.com/WizzyWu/js-aws-course-back/pull/3
 * PR Task 6: https://github.com/WizzyWu/js-aws-course-back/pull/4
+* PR Task 7: https://github.com/WizzyWu/js-aws-course-back/pull/5
 
 ## Frontend:
 * Repository: https://github.com/WizzyWu/js-aws-course-back
@@ -25,6 +26,17 @@ Repository for backend part of homework at JS AWS Practitioner Course
 * PR Task 2: https://github.com/WizzyWu/js-aws-course-vue/pull/1
 * PR Task 3: https://github.com/WizzyWu/js-aws-course-vue/pull/2
 * PR Task 5: https://github.com/WizzyWu/js-aws-course-vue/pull/3
+* PR Task 7: https://github.com/WizzyWu/js-aws-course-vue/pull/4
+
+# Task 7
+
+## What was done:
+## Base tasks
+1 (DONE Backend) - authorization-service is added to the repo, has correct basicAuthorizer lambda and correct serverless.yaml file
+3 (DONE Backend) - Import Service serverless.yaml file has authorizer configuration for the importProductsFile lambda. Request to the importProductsFile lambda should work only with correct authorization_token being decoded and checked by basicAuthorizer lambda. Response should be in 403 HTTP status if access is denied for this user (invalid authorization_token) and in 401 HTTP status if Authorization header is not provided.
+5 (DONE Frontend) - Client application is updated to send "Authorization: Basic authorization_token" header on import. Client should get authorization_token value from browser localStorage
+## Additional tasks
++1 (DONE Frontend) - Client application should display alerts for the responses in 401 and 403 HTTP statuses. This behavior should be added to the nodejs-aws-fe-main/src/index.tsx file.
 
 # Task 6
 
