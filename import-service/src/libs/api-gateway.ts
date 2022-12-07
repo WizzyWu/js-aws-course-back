@@ -10,7 +10,10 @@ export const formatJSONResponse = (response) => {
     statusCode: response.statusCode,
     headers: {
       'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': true,
+      'Access-Control-Allow-Credentials': 'true',
+      'Access-Control-Allow-Headers': 'Content-Type,Authorization,Origin,Access-Control-Request-Method,Access-Control-Request-Headers',
+      'Access-Control-Allow-Methods': 'OPTIONS,GET,POST',
+
     },
     body: JSON.stringify(response.body)
   }

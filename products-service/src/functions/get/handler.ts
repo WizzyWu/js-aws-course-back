@@ -4,7 +4,7 @@ import { middyfy } from '@libs/lambda';
 import * as _ from 'lodash';
 
 import schema from './schema';
-import { query } from './../../data/dynamo-db-helpers';
+import { query } from '../../aws-helpers/dynamodb-functions';
 import { productsTableQueryParams, stockTableQueryParams } from './../../params/db';
 
 const getProductById: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {

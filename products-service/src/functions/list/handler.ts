@@ -3,7 +3,7 @@ import { formatJSONResponse } from '@libs/api-gateway';
 import { middyfy } from '@libs/lambda';
 import * as _ from 'lodash';
 import schema from './schema';
-import { scan } from './../../data/dynamo-db-helpers';
+import { scan } from '../../aws-helpers/dynamodb-functions';
 import { productsTableScanParams, stockTableScanParams } from './../../params/db';
 
 const getProductsList: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async () => {

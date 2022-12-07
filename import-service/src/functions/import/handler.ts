@@ -4,11 +4,12 @@ import { middyfy } from '@libs/lambda';
 
 import schema from './schema';
 import * as _ from 'lodash';
-import { s3_getSignedUrl } from '../../s3-helper/s3-functions';
+import { s3_getSignedUrl } from '../../aws-helpers/s3-functions';
 
 const importProductsFile: ValidatedEventAPIGatewayProxyEvent<typeof schema> = async (event) => {
   const { queryStringParameters } = event;
   try {
+    console.log('start');
     const fileName = _.get(queryStringParameters, 'name', null);
 
     if (!fileName) {
@@ -17,8 +18,9 @@ const importProductsFile: ValidatedEventAPIGatewayProxyEvent<typeof schema> = as
         body: { message: 'Bad request' },
       });
     }
-
+    console.log('after filename check');
     const signedUrl = await s3_getSignedUrl(fileName);
+    console.log('after s3_getSignedUrl');
     return formatJSONResponse({
       statusCode: 200,
       body: { signedUrl },
@@ -32,4 +34,4 @@ const importProductsFile: ValidatedEventAPIGatewayProxyEvent<typeof schema> = as
   }
 };
 
-export const main = middyfy(importProductsFile);
+export const main = importProductsFile;
