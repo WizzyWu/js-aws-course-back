@@ -66,6 +66,31 @@ export class CartService {
     this.userCarts[ userId ] = null;
   }
 */
+  async updateCart (cart_id, {items}: Cart): Promise<Cart> {
+    const client = new Client(dbOptions);
+    await client.connect();
+    console.log('updateCart items', items);
+    const product_ids = items.map((item) => item.product_id).join(',');
+    try {
+      await client.query(`DELETE from cart_items where cart_id = '${cart_id}' AND product_id IN (${product_ids})`);
+      let insertQuery = 'INSERT INTO cart_items (cart_id, product_id, product_price, count) VALUES ';
+      const itemsValues = [];
+      items.forEach((item) => {
+        itemsValues.push(`('${cart_id}', ${item.product_id}, ${item.product_price}, ${item.count})`);
+      });
+      insertQuery += `${itemsValues.join(', ')};`
+      console.log('insertQuery', insertQuery);
+      await client.query(insertQuery);
+    } catch (error) {
+      console.log(error)
+      return {} as Cart;
+    }
+    finally {
+      await client.end();
+    }
+    return await this.getCart(cart_id);
+  }
+
   async getCart(cartId: string): Promise<Cart> {
     console.log('requests to db');
     const client = new Client(dbOptions);

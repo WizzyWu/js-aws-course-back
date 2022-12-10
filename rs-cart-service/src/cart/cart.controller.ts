@@ -7,6 +7,7 @@ import { AppRequest, getUserIdFromRequest } from '../shared';
 import { calculateCartTotal } from './models-rules';
 import { CartService } from './services';
 
+const DEFAULT_CART_ID = '460dbc58-3dc9-40f0-a822-cfe1b7d3622e';
 
 @Controller('api/profile/cart')
 export class CartController {
@@ -19,7 +20,7 @@ export class CartController {
   async _getCard () {
     console.log('inside get cart method');
     // default card id to not implement work with users
-    return await this.cartService.getCart('460dbc58-3dc9-40f0-a822-cfe1b7d3622e');
+    return await this.cartService.getCart(DEFAULT_CART_ID);
   }
 
   // @UseGuards(JwtAuthGuard)
@@ -40,7 +41,7 @@ export class CartController {
   // @UseGuards(BasicAuthGuard)
   @Put()
   async updateUserCart(@Req() req: AppRequest, @Body() body) { // TODO: validate body payload...
-    const cart = await this._getCard ();
+    const cart = await this.cartService.updateCart(DEFAULT_CART_ID, body);
 
     return {
       statusCode: HttpStatus.OK,
