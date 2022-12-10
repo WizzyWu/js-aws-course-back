@@ -1,3 +1,5 @@
+import { ReadLine } from "readline";
+
 export type Product = {
   id: string,
   title: string,
@@ -7,7 +9,8 @@ export type Product = {
 
 
 export type CartItem = {
-  product: Product,
+  product_id: number,
+  product_price: number,
   count: number,
 }
 
